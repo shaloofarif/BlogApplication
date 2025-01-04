@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Admin\BlogController;
 
 /*
@@ -14,6 +15,10 @@ use App\Http\Controllers\Admin\BlogController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+// Registration Routes
+Route::get('/register', [RegisteredUserController::class, 'create'])->name('register');
+Route::post('/register', [RegisteredUserController::class, 'store'])->name('register.store');
 
 // Admin Login Routes
 Route::get('/admin/login', [LoginController::class, 'showLoginForm'])->name('admin.login.form');
@@ -28,7 +33,7 @@ Route::middleware('admin.auth')->prefix('admin')->name('admin.')->group(function
     Route::resource('blogs', BlogController::class);
 
 });
-Route::get('/blogs', [BlogController::class, 'list'])->name('blogs.index');
+Route::get('/', [BlogController::class, 'list'])->name('blogs.index');
 Route::get('blog/{id}', [BlogController::class, 'blogDetails'])->name('blog.details');
 
 
