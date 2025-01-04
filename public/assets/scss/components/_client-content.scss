@@ -1,0 +1,132 @@
+// .client-content {
+
+//   .client-slider {
+//     -webkit-flex-shrink: 0;
+//     -ms-flex-negative: 0;
+//     flex-shrink: 0;
+//     display: flex;
+//     align-items: center;
+//     gap: 64px;
+//     padding: 0 37px;
+//     -webkit-animation: animation-slide 85s linear infinite;
+//     animation: animation-slide 85s linear infinite;
+
+//     @include mq(phone) {
+//       gap: 32px;
+//     }
+
+//     .clients-img {
+//       min-width: auto;
+//       max-width: 140px;
+//       @include mq(phone) {
+//         max-width: 112px;
+//       }
+
+//     }
+//   }
+
+
+// }
+
+
+// @keyframes animation-slide {
+//   from {
+//     -webkit-transform: translateX(0);
+//     -moz-transform: translateX(0);
+//     -ms-transform: translateX(0);
+//     transform: translateX(0);
+//   }
+
+//   to {
+//     -webkit-transform: translateX(-100%);
+//     -moz-transform: translateX(-100%);
+//     -ms-transform: translateX(-100%);
+//     transform: translateX(-100%);
+//   }
+// } 
+
+
+
+// @keyframes slide {
+//   from {
+//     transform: translateX(0);
+//   }
+
+//   to {
+//     transform: translateX(-100%);
+//   }
+// }
+
+// @keyframes slide {
+//   0% {
+//     transform: translateX(0);
+//   }
+
+//   100% {
+//     transform: translateX(-50%);
+//   }
+// }
+
+// .client-slider {
+//   overflow: hidden;
+//   padding: 60px 0;
+//   white-space: nowrap;
+//   position: relative;
+
+//   &:before,
+//   &:after {
+//     position: absolute;
+//     top: 0;
+//     width: 250px;
+//     height: 100%;
+//     content: "";
+//     z-index: 2;
+//   }
+
+//   &:before {
+//     left: 0;
+//   }
+
+//   &:after {
+//     right: 0;
+//   }
+// }
+
+
+.client-content {
+  .client-wrapper {
+    .client-slider {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+
+
+      .clients-img {
+        display: flex;
+        gap: rem(64);
+        width: fit-content;
+        animation: marquee 50s linear infinite;
+
+        @include mq(tablet) {
+          gap: rem(32);
+        }
+
+        img {
+          width: auto;
+          height: rem(40);
+
+        }
+      }
+    }
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}

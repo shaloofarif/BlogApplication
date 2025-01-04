@@ -1,0 +1,41 @@
+.slider-section {
+  .slider-wrapper {
+    position: relative;
+    border-radius: $border-radius-md;
+    overflow-x: hidden;
+  }
+
+  .slider-item {
+    // position: relative;
+    background-image: url("#{$image-path}/png/home-slider-img-1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 796px;
+    @include mq(phone) {
+      background-image: url("#{$image-path}/png/home-slider-img-resp.png");
+      height: 342px;
+    }
+  }
+
+  .slider-overlayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(26, 26, 26, 0.5) 0%, rgba(26, 26, 26, 0.55) 45.68%, #1A1A1A 100%);
+  }
+
+  .slider-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    max-width: 983px;
+    margin: rem(56);
+
+    @include mq(phone) {
+      margin: rem(16);
+    }
+  }
+}

@@ -1,0 +1,177 @@
+.explore-solution-container {
+  .explore-solution-contents {
+    gap: rem(30);
+
+    @include mq(tablet) {
+      gap: rem(0);
+      display: block;
+    }
+
+
+    .explore-solution-left {
+      .explore-solution-headings {
+        max-width: rem(587);
+
+        .explore-solution-desc {
+          margin-bottom: rem(64);
+
+          @include mq(tablet) {
+            margin-bottom: rem(32);
+          }
+        }
+      }
+
+      .security-management-content {
+        max-width: rem(512);
+
+        @include mq(tablet) {
+          max-width: 100%;
+        }
+
+        .management-image {
+          display: none;
+          box-shadow: 0px 0px 35px 0px #EFEFEF;
+          border-radius: $border-radius;
+          @include mq(tablet) {
+            display: block;
+            margin-top: rem(20);
+          }
+
+        }
+
+
+
+
+        .management-content {
+          padding: rem(32) 0;
+
+          @include mq(tablet) {
+            padding-bottom: rem(32);
+            padding-top: 0;
+          }
+
+          @include mq(phone) {
+            padding-bottom: rem(56);
+            padding-top: 0;
+            &:last-child {
+              padding-bottom: 0;
+            }
+          }
+
+          .management-heading {
+            color: var(--text-secondary);
+
+            @include mq(tablet) {
+              color: var(--text-green-primary);
+              margin-bottom: rem(8);
+            }
+            @include mq(phone) {
+              max-width: 95%;
+            }
+
+          }
+
+          .management-desc {
+            color: var(--text-Gainsboro);
+
+            @include mq(tablet) {
+              color: var(--text-tertiary);
+            }
+          }
+
+          &.active .management-heading {
+            color: var(--text-green-primary);
+            transition: color 0.65s;
+          }
+
+          &.active .management-desc {
+            color: var(--text-tertiary);
+            transition: color 0.65s;
+          }
+        }
+
+        .management-desc {
+          color: var(--text-Gainsboro);
+        }
+
+
+      }
+    }
+
+    .explore-solution-right {
+      max-width: rem(578);
+      position: sticky;
+      top: rem(120);
+      align-self: start;
+      box-shadow: 0px 0px 35px 0px #EFEFEF;
+      border-radius: $border-radius-md;
+      @include mq(desktop-md){
+        max-width: rem(500);
+      }
+    }
+  }
+
+  .management-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    opacity: 0.5;
+    transition: opacity 0.65s ease-in-out;
+    margin-bottom: rem(20);
+
+    @include mq(tablet) {
+      margin-bottom: 0;
+    }
+  }
+
+  .management-content.active {
+    opacity: 1;
+  }
+
+  .progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--border-primary);
+    opacity: 0;
+    transition: opacity 0.65s ease-in-out;
+  }
+
+  .progress-inner {
+    height: 100%;
+    background-color: var(--border-tertiary-new);
+    width: 0;
+    transition: width 0.65s ease-in-out;
+
+    @include mq(tablet) {
+      opacity: 0;
+    }
+  }
+
+  .management-content.active .progress {
+    opacity: 1;
+
+    @include mq(tablet) {
+      opacity: 0;
+    }
+  }
+
+
+
+
+  .dynamic-image {
+    display: block;
+
+    transition: opacity 0.65s ease-in-out;
+
+    @include mq(tablet) {
+      display: none;
+    }
+  }
+
+
+}

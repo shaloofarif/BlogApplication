@@ -1,0 +1,21 @@
+html {
+  --reset-rem-size: 16px;
+}
+
+// typography
+$base-font-family: "DM Sans", sans-serif;
+
+$browser-context: 16;
+
+// image path
+$image-path: '../images';
+
+$customScrollSize: 8px;
+$row-gutter: 12px;
+
+// border radius
+$border-radius-xs: 4px;
+$border-radius-sm: 6px;
+$border-radius: 8px;
+$border-radius-md: 12px;
+$border-radius-lg: 16px;

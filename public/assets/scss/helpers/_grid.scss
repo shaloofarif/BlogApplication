@@ -1,0 +1,33 @@
+.container {
+	// max-width: 1400px;
+	max-width: 1440px;
+	padding: 0 rem(80);
+	margin: 0 auto;
+
+	// @include mq(desktop-wide) {
+	// 	// max-width: 1310px;
+	// 	max-width: 1372px;
+	// 	padding: 0 rem(30);
+
+	// }
+
+	@include mq(tablet) {
+		padding: 0 rem(40)
+	}
+
+	@include mq(tablet) {
+		padding: 0 rem(30)
+	}
+
+	@include mq(phone) {
+		padding: 0 rem(16);
+	}
+
+	&-fluid {
+		padding: 0 rem(40);
+
+		@include mq(tablet) {
+			padding: 0 rem(15);
+		}
+	}
+}

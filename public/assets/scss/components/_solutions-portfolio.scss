@@ -1,0 +1,100 @@
+.security-management-container {
+  padding: rem(104) 0 rem(128) 0;
+
+  @include mq(tablet) {
+    padding: rem(52) 0 rem(62) 0;
+
+  }
+
+  @include mq(phone) {
+    padding: rem(32) 0 rem(48) 0;
+
+  }
+
+  .management-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    gap: rem(24);
+
+    @include mq(phone) {
+      gap: rem(12);
+    }
+
+    // @media (max-width: 1439px) {
+    //   justify-content: center;
+    // }
+
+  }
+
+  .management-card {
+    display: flex;
+    flex-direction: column;
+    // width: 100%;
+    // max-width: rem(410);
+    min-width: calc((100%/3) - 24px);
+    max-width: calc((100%/3) - 24px);
+    gap: rem(32);
+    padding: rem(32);
+    border: rem(1) solid var(--border-secondary);
+    border-radius: $border-radius-md;
+    transition: box-shadow 0.4s ease, transform 0.4s ease;
+
+    @include mq(tablet) {
+      min-width: calc((100%/2) - 24px);
+      max-width: calc((100%/2) - 24px);
+      gap: rem(31);
+      padding: rem(24) rem(24) rem(30) rem(24);
+    }
+
+    @include mq(phone) {
+      min-width: 100%;
+      max-width: 100%;
+      gap: rem(28);
+    }
+
+    .card-image-wrapper {
+      display: flex;
+      justify-content: space-between;
+      // @include mq(phone) {
+      //   min-width: rem(32);
+      //   max-width: rem(32);
+      //   min-height: rem(32);
+      //   max-height: rem(32);
+      // }
+    }
+
+    .management-icon {
+      max-width: rem(40);
+
+      @include mq(phone) {
+        max-width: rem(32);
+      }
+    }
+
+    .card-arrow {
+      opacity: 0;
+      transition: opacity 0.4s ease, transform 0.4s ease;
+
+      @include mq(tablet) {
+        opacity: 1;
+      }
+    }
+
+    // &:hover {
+    //   box-shadow: 0 0 rem(35) 0 var(--drop-shadow-secondary);
+    //   border-color: var(--border-primary);
+
+    //   .card-arrow {
+    //     opacity: 1;
+    //   }
+    // }
+
+    .management-card-title {
+      @include mq(phone) {
+        font-size: rem(16);
+      }
+    }
+  }
+
+}

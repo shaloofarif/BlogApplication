@@ -1,0 +1,211 @@
+.contact-form {
+  max-width: rem(624);
+
+  @include mq(tablet) {
+    max-width: initial;
+  }
+
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+
+
+    @include mq(tablet) {
+      flex-direction: column;
+    }
+
+    .form-group {
+      flex: 1;
+      min-width: rem(304);
+      margin-bottom: rem(16);
+      transition: all .35s;
+
+      @include mq(desktop) {
+        min-width: rem(250);
+      }
+
+      @include mq(phone) {
+        margin-bottom: rem(8);
+
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      label {
+        display: block;
+        font-weight: bold;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: rem(20) rem(20) rem(20) rem(28);
+        border: 1px solid var(--border-secondary-dark);
+        border-radius: $border-radius-md;
+        transition: border .5s;
+        box-sizing: border-box;
+        outline: none;
+        resize: none;
+
+        &:hover {
+          border-color: var(--border-tertiary-dark);
+        }
+
+        &:focus {
+          border-color: var(--border-tertiary-dark);
+        }
+
+        @include mq(phone) {
+          padding: rem(16) rem(12);
+        }
+      }
+
+
+
+      .mobile-group {
+        display: flex;
+        width: 100%;
+        padding: rem(12) rem(20) rem(12) rem(20);
+        border: 1px solid var(--border-secondary-dark);
+        transition: all .35s;
+        border-radius: $border-radius-md;
+        box-sizing: border-box;
+        outline: none;
+        min-height: rem(64);
+        @include mq(phone) {
+          align-items: center;
+          padding: rem(16) rem(12);
+          min-height: rem(54);
+        }
+
+        &:hover {
+          border-color: var(--border-tertiary-dark);
+        }
+
+        &:focus {
+          border-color: var(--border-tertiary-dark);
+        }
+
+        input {
+          flex: 1;
+          border: none;
+          padding: 0;
+          // padding-left: 72px !important;
+        }
+
+        // #mobile-number {
+        //   border-left: 1px solid var(--border-secondary-dark);
+        //   border-radius: 0;
+        //   padding-left: rem(18);
+        //   @include mq(phone) {
+        //     height: rem(18);
+        //   }
+        // }
+       
+      }
+    }
+  }
+
+  .form-textarea {
+    @include mq(phone) {
+      margin-bottom: rem(16) !important;
+    }
+  }
+
+  .form-group {
+
+    input::placeholder,
+    textarea::placeholder {
+      font-weight: 400;
+      font-size: rem(16);
+      line-height: 1.5;
+      color: $grey-20;
+      @include mq(phone) {
+        font-size: rem(14);
+      }
+    }
+
+    .select2 {
+      max-width: rem(52);
+    }
+
+    .select2-selection__rendered {
+      padding-right: rem(8);
+      @include mq(phone) {
+        font-size: rem(14);
+      }
+    }
+  }
+
+  .error-message {
+    color: var(--error-msg);
+  }
+
+
+}
+
+
+
+
+.mobile-group {
+  
+
+  .iti {
+    display: flex;
+    input.form-control {
+      font-weight: 400;
+      font-size: rem(16);
+      color: var(--text-primary);
+      line-height: 1.5;
+    
+      @include mq(phone) {
+        font-size: rem(14);
+      }
+    }
+  }
+  .iti__selected-flag {
+    border-right: 1px solid var(--border-secondary-dark);
+    background-color: transparent;
+    padding: 0 4px 0 0;
+    .iti__flag {
+      display: none;
+    }
+    .iti__arrow {
+      border: none;
+      background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%23999999' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      width: 24px;
+      height: 24px;
+      transition: all .35s;
+      &.iti__arrow--up {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+  .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
+      background-color: transparent;
+  }
+  .iti--separate-dial-code .iti__selected-dial-code {
+    margin-left: 0;
+    font-weight: 400;
+    font-size: rem(16);
+    color: var(--text-secondary-dark);
+    line-height: 1;
+  }
+ .iti__country-list {
+  min-width: 300px;
+  max-width: 300px;
+  top: 54px;
+  left: -15px;
+  overflow-x: clip;
+  border: none;
+  @include custom-scroll;
+  .iti__flag-box {
+    display: none;
+  }
+ }
+}

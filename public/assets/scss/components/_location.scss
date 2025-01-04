@@ -1,0 +1,32 @@
+.location {
+  padding-bottom: 176px;
+
+  @include mq(desktop-md) {
+    padding-bottom: rem(80);
+  }
+
+  @include mq(tablet) {
+    padding-bottom: rem(40);
+  }
+
+  .location-wrapper {
+    // max-width: 1198px;
+    margin: auto;
+    padding: rem(48) 0;
+    gap: 20px;
+
+    @include mq(phone) {
+      gap: rem(24);
+      padding: rem(24) 0 rem(48) 0;
+    }
+
+  }
+
+  .loc-desc {
+    max-width: 181px;
+
+    @include mq(phone) {
+      max-width: 100%;
+    }
+  }
+}

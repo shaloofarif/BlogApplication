@@ -1,0 +1,147 @@
+.standards-regulations-container {
+
+  .cmn-banner-contents {
+    @include mq(tablet) {
+      flex-direction: column;
+      padding-top: rem(103);
+
+    }
+
+    @include mq(phone) {
+      padding-left: rem(16);
+      padding-right: rem(16);
+    }
+
+    .cmn-banner-left {
+      .banner-title {
+        max-width: rem(820);
+      }
+
+      .cmn-banner-desc {
+        max-width: rem(540);
+      }
+    }
+  }
+
+  .regulations-banner-container {
+    .regulations-banner-contents {
+      &::before {
+        background-image: url("#{$image-path}/svg/regulations-bg-gradient.svg");
+
+        @include mq(phone) {
+          background-image: url("#{$image-path}/png/regulation-banner-resp.png");
+        }
+      }
+    }
+  }
+
+  .guidelines-container {
+    padding-bottom: rem(104);
+
+    @include mq(phone) {
+      padding-bottom: rem(48);
+    }
+
+
+    .guidelines-content {
+
+      .guidelines-tittle {
+        max-width: rem(700);
+        // margin: auto;
+      }
+
+      .guidelines-desc {
+        max-width: rem(1018);
+
+      }
+    }
+  }
+
+  .guidelines-site-container {
+    .site-cards-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      // display: flex;
+      // align-items: center;
+      // flex-wrap: wrap;
+      gap: rem(24);
+      width: 100%;
+
+      @include mq(desktop-md) {
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+      }
+
+      @include mq(phone) {
+        gap: rem(12);
+        grid-template-columns: 1fr;
+      }
+
+
+    }
+
+    .site-card {
+      max-width: rem(410);
+      // min-width: rem(410);
+      height: rem(277);
+      width: 100%;
+      border: rem(1) solid var(--border-secondary);
+      border-radius: $border-radius-md;
+      padding: rem(24);
+      transition: all 0.5s ease;
+
+      @include mq(desktop-md) {
+        max-width: initial;
+      }
+
+      @include mq(phone) {
+        padding: rem(22);
+        height: initial;
+      }
+
+      .site-logo {
+        max-width: 142px;
+        max-height: 48px;
+      }
+
+      .arrow {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .site-tittle {
+        color: var(--text-oxford-blue);
+
+        @include mq(phone) {
+          max-width: rem(265);
+        }
+      }
+
+      .site-desc {
+        color: var(--text-oxford-blue);
+      }
+
+      // &:hover {
+      //   box-shadow: 0 rem(4) rem(10) rgba(0, 0, 0, 0.1);
+
+      //   .arrow {
+      //     opacity: 1;
+
+      //     @include mq(phone) {
+      //       opacity: 0;
+      //     }
+      //   }
+      // }
+
+
+    }
+  }
+
+  .mid-banner-title-gradient {
+    // max-width: 725px;
+    @include mq(phone) {
+      max-width: 90%
+    }
+  }
+
+}

@@ -1,0 +1,70 @@
+.guideline-container {
+  .guideline-wrapper {
+    display: flex;
+    background: url('#{$image-path}/svg/guideline-bg-svg.svg') no-repeat center left,
+    linear-gradient(100.9deg, #1F4E39 34.03%, #1A1A1A 98.99%);
+    background-repeat: no-repeat;
+    border-radius: $border-radius-lg;
+    margin: 0 rem(40) rem(60) rem(40);
+    position: relative;
+    column-gap: rem(100);
+    align-items: center;
+    overflow: hidden;
+
+    @include mq(desktop-md) {
+      column-gap: rem(30);
+    }
+
+
+
+    @include mq(phone) {
+      flex-direction: column;
+      margin: 0 rem(16) rem(32) rem(16);
+      background: linear-gradient(166.03deg, #22533D 43.16%, #1A1A1A 100.28%);
+      ;
+    }
+  }
+
+  .guideline-content {
+    padding: rem(80) 0 rem(86) rem(96);
+
+    @include mq(tablet) {
+      padding: rem(40) rem(20) rem(40) rem(20);
+    }
+
+    @include mq(phone) {
+      padding: rem(40) rem(16) rem(30) rem(16);
+    }
+  }
+
+  .guideline-title {
+    @include mq(phone) {
+      max-width: 85%;
+    }
+  }
+
+  .guideline-desc {
+    max-width: rem(540);
+  }
+
+  .gruideline-img {
+    max-width: rem(522);
+    min-width: rem(522);
+    padding-right: rem(105);
+
+    @include mq(desktop-md) {
+      max-width: rem(400);
+      min-width: rem(400);
+      padding-right: 0;
+
+    }
+
+    @include mq(phone) {
+      max-width: 100%;
+      min-width: 100%;
+      display: flex;
+      justify-content: center;
+      padding-right: 0;
+    }
+  }
+}

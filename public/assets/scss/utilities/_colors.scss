@@ -1,0 +1,17 @@
+.bg-primary {
+  background-color: var(--bg-secondary);
+}
+
+.bg-secondary {
+  background-color: var(--bg-primary);
+}
+
+.font-hover {
+  &-primary {
+    transition: color .4s;
+
+    &:hover {
+      color: var(--primary-dark);
+    }
+  }
+}

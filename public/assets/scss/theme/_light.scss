@@ -1,0 +1,96 @@
+$colors: (
+  --white: $white,
+  --black: $black,
+
+  // Main
+  --primary: #1A1A1A,
+  --secondary: #535353,
+  --tertiary: #DBAC16,
+  --tertiary-dark: #AC850A,
+
+
+  // Text 
+  --text-primary: #1A1A1A,
+  --text-secondary: #D1D1D1,
+  --text-secondary-dark:#999999,
+  --text-secondary-light: #C6C6C6,
+  --text-tertiary: #535353,
+  --text-green-primary: #22533D,
+  --text-oxford-blue: #253138,
+  --text-Gainsboro :#DDDDDD,
+  // --text-primary-disabled: #626262,
+
+  // Gradient
+  //  --gradient-primary: linear-gradient(92.26deg, #DDDDE0 0.51%, #DDDDE0 92.43%),
+  //  --gradient-secondary: linear-gradient(92.59deg, #B2C0B8 2.51%, #FFFFFF 79.73%),
+  //  --gradient-tertiary: linear-gradient(104.16deg, #DB8016 1.88%, #DBAC16 96.99%),
+
+
+  // Background
+  --bg-primary: #F4F7F6,
+  --bg-secondary: #E5E8E7,
+  --bg-tertiary: #1A1A1A,
+  --bg-secondary-dark: #F0F2F2,
+  // --bg-tertiary-hover: #2C2E39,
+
+  --bg-block-primary: #22533D,
+  --bg-block-secondary: #D1D1D1,
+  // --bg-block-light-on-dark: #292A33,
+
+  // Link
+  --link-primary: #1A1A1A,
+  --link-secondary: #AC850A,
+
+  // System
+  // --system-success: #43B498,
+  // --system-error: #FD7580,
+  //error
+  --error-msg: #FF0F0F,
+  // Badge
+  // --badge-bg-primary: #ED7D31,
+  // --badge-bg-secondary: #65DBDF,
+
+  // Border
+  --border-primary: #D9D9D9,
+  --border-primary-dark: #F4F7F6,
+  --border-primary-light: #EFEFEF,
+  --border-secondary: #EBEBEB,
+  --border-secondary-light: #E5E8E7,
+  --border-secondary-dark: #C6C6C6,
+  --border-tertiary: #F9FAFA,
+  --border-tertiary-dark:#999999,
+  --border-tertiary-light:#EBEAE6,
+  --border-tertiary-new: #DB8016,
+
+  // Interactive others
+  --Interactive-primary-hover: #2E684E,
+  --Interactive-secondary-hover: #DFDFDF,
+  --Interactive-link-hover: #DBAC16,
+
+  //Drop-shadow
+  --drop-shadow-primary: #1A1A1A12,
+  --drop-shadow-secondary: #1A1A1A0F,
+  --drop-shadow-tertiary: #0000000F,
+
+
+
+  --nav-link: #F0F0F0,
+  // Icon
+  // --icon-primary: #64C4D1,
+  // --icon-on-secondary: #E7E9ED,
+  // --icon-on-hover: #292A33,
+);
+
+// generating root HEX, RGB variants variables
+:root {
+  &[data-theme="theme-light"] {
+
+    @each $color,
+    $value in $colors {
+      #{$color}: #{$value};
+      #{$color}-rgb: #{red($value)},
+      #{green($value)},
+      #{blue($value)};
+    }
+  }
+}

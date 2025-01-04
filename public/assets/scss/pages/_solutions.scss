@@ -1,0 +1,68 @@
+.solutions-container {
+
+  .cmn-banner-container {
+    .cmn-banner-contents {
+      &::before {
+        background-image: url("#{$image-path}/svg/solution-banner-gradient.svg");
+
+        @include mq(phone) {
+          background-image: url("#{$image-path}/png/solution-responsive-banner.png");
+
+        }
+      }
+
+      .cmn-banner-left {
+        .banner-title {
+          max-width: rem(794);
+          @include mq(phone) {
+            max-width: 80%;
+          }
+        }
+
+        .cmn-banner-desc {
+          max-width: rem(653);
+          @include mq(phone) {
+            max-width: 95%;
+          }
+        }
+      }
+    }
+  }
+
+  .banner-img-wrapper {
+
+    .solution-banner-img {
+
+      @include mq(tablet) {
+        max-width: rem(420);
+        // min-width: rem(420);
+        margin-left: auto;
+      }
+
+      @include mq(phone-sm) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .cmn-banner-right {
+    @include mq(tablet) {
+      margin: initial !important;
+      margin-left: auto !important;
+    }
+  }
+
+  .cmn-banner-contents {
+    @include mq(tablet) {
+      padding-top: rem(103);
+    }
+  }
+
+  .mid-banner-title-gradient {
+    max-width: 725px;
+    @include mq(phone) {
+      max-width: 90%
+    }
+  }
+
+}

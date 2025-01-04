@@ -1,0 +1,66 @@
+.mid-banner-wrapper {
+  display: flex;
+  justify-content: center;
+  background: var(--bg-tertiary);
+  border-radius: $border-radius-lg;
+  padding: rem(64);
+  margin: 0 rem(40);
+  position: relative;
+
+  @include mq(phone) {
+    margin: 0 rem(16);
+    padding: rem(48) rem(16) rem(40) rem(16);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("#{$image-path}/svg/discover-card-bg.svg");
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: $border-radius-lg;
+
+    @include mq(phone) {
+      background-image: url("#{$image-path}/svg/discover-resp-bg.svg");
+      // background-position: bottom;
+      // background-size: cover;
+      // background-repeat: no-repeat;
+    }
+  }
+}
+
+.mid-banner-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 845px;
+  z-index: 1;
+
+  .mid-banner-icon-wrapper {
+    @include mq(phone) {
+      img {
+        max-width: rem(12);
+      }
+    }
+  }
+
+  .mid-banner-title-gradient {
+    @include mq(phone) {
+      max-width: 93%;
+    }
+  }
+  
+  .mid-banner-desc {
+    max-width: 750px;
+    @include mq(phone) {
+      max-width: 93%;
+    }
+  }
+}

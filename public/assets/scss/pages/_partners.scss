@@ -1,0 +1,112 @@
+.partner-container {
+  .cmn-banner-container {
+    background-image: url("#{$image-path}/png/partner-banner-img.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include mq(phone) {
+      background-image: url("#{$image-path}/png/partner-banner-img-resp.png");
+    }
+
+
+    .cmn-banner-contents {
+      background: linear-gradient(92.21deg, #1A1A1A 32.46%, rgba(26, 26, 26, 0.7) 91%, rgba(26, 26, 26, 0.2) 150.23%);
+
+      @include mq(phone) {
+        background: linear-gradient(156.16deg, #1A1A1A 20.62%, rgba(26, 26, 26, 0.4) 61.24%, rgba(26, 26, 26, 0.1) 90.19%);
+      }
+
+      .cmn-banner-desc,
+      .banner-content-title {
+        @include mq(phone) {
+          max-width: rem(330);
+        }
+      }
+
+      .cmn-banner-left {
+        @include mq(phone) {
+          padding-right: rem(16);
+        }
+
+        @include mq(phone) {
+          padding-top: rem(103);
+        }
+      }
+
+      .mtb-auto {
+        @include mq(phone) {
+          margin: 0;
+
+        }
+      }
+
+      &::before {
+        background-image: url("#{$image-path}/svg/partner-banner-gradient.svg");
+        z-index: 1;
+        @include mq(phone) {
+          background-image: url("#{$image-path}/png/partner-banner-gradient-resp.png");
+        }
+      }
+    }
+
+    // .cmn-banner-left {
+    //   background-image: url("#{$image-path}/png/partner-banner-img.png");
+    // }
+  }
+
+  .build-content-title {
+    max-width: rem(680);
+
+  }
+
+  .build-desc {
+    max-width: rem(832);
+  }
+}
+
+.partner-img-wrapper {
+  justify-content: center;
+  row-gap: rem(16);
+  margin-left: rem(-16);
+
+  @include mq(phone) {
+    row-gap: rem(12);
+    margin-left: rem(-12);
+  }
+
+  .partner-img-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: calc((100% / 5) - 16px);
+    max-width: calc((100% / 5) - 16px);
+    margin-left: rem(16);
+    height: rem(120);
+    background: var(--bg-primary);
+    border-radius: $border-radius-md;
+
+    @include mq(tablet) {
+      min-width: calc((100% / 4) - 16px);
+      max-width: calc((100% / 4) - 16px);
+    }
+
+    @include mq(phone) {
+      min-width: calc((100% / 2) - 12px);
+      max-width: calc((100% / 2) - 12px);
+      margin-left: rem(12);
+    }
+
+    @include mq(phone) {
+      height: rem(82);
+    }
+
+    img {
+      max-width: rem(140);
+
+      @include mq(phone) {
+        max-width: rem(100);
+      }
+    }
+  }
+}
